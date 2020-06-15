@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title></title>
+    <link rel="stylesheet" href="styles/style.css" media="all" />
+    <script src="src/p5.min.js"></script>
+
+    <script src="src/p5.sound.min.js"></script>
+    <script src="src/target.js"></script>
+    <script src="src/shooter.js"></script>
+    <script src="src/main.js"></script>
+  </head>
+  <body>
+    <div id="infoBar" class="info">
+      <div
+        class="closeBtn"
+        onclick="document.getElementById('infoBar').style.display='none'"
+      >
+        &#10799;
+      </div>
+      <h3 class="heading">How To Play Aim Trainer?</h3>
+      <div class="answer">
+        Press Space or shoot a target to start the timer,<br />
+        The timer stops as soon as all the targets are hit. <br />
+        <br />
+        Hiting the target in the center deals more damage :)
+      </div>
+      <h3 class="heading">How to reload?</h3>
+      <div class="answer">
+        Press R to reload weapon.
+        <div class="note">Note: Weapons can't be fired while reloading</div>
+      </div>
+      <h3 class="heading">Settings</h3>
+      <div class="answer">
+        <div class="title" id="t_label">Number of targets to hit</div>
+
+        <input
+          type="number"
+          name="targetCount"
+          id="targetCount"
+          placeholder="Number of targes; eg: 6"
+          value="6"
+        />
+        <button class="saveBtn" onclick="saveSettings1()">Save</button>
+        <div class="note">
+          Number of targets: Min limit is 1 and Max is 100.
+        </div>
+      </div>
+
+      <div class="answer">
+        <div class="title" id="t_label2">Mag bullet count</div>
+        <input
+          type="number"
+          name="targetCount"
+          id="bulletCount"
+          placeholder="Mag capacity; eg: 8"
+          value="8"
+        />
+        <button class="saveBtn" onclick="saveSettings2()">Save</button>
+        <div class="note">
+          Number of bullets stored in a Mag: Min limit is 6 and Max is 999.
+        </div>
+      </div>
+    </div>
+    <div id="p5_loading">
+      <br />
+      <div class="shade1"></div>
+      <br />
+
+      <div class="loadingclass"></div>
+      <br />
+
+      <div class="shade1"></div>
+    </div>
+  </body>
+</html>
